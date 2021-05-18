@@ -4,7 +4,7 @@ How to use Unity Engine to create an Oculus application
 # Table of Contents
 - **Project Overview**	
   - Unity Setup	
-- **Set Up Development Environment	**
+- **Set Up Development Environment**
   - Oculus Setup	
   - Enable Device for Development and Testing	
   - Import Oculus Integration Package	
@@ -47,9 +47,9 @@ The following instructions for setting up Unity Game Engine are adapted from htt
 3. Ensure the Android tools correctly installed by going to Android Studio -> Configure -> SDK Manager -> SDK Platforms and SDK Tools tabs (Fig. 2)
 4. Ensure that the Android tools are added to your Environment Variables for your computer so that you can access the tools from the command line. Example: C:\Users\user\AppData\Local\Android\sdk\platform-tools.
 5. Install Android Debug Bridge (ADB): https://developer.oculus.com/downloads/package/oculus-adb-drivers/.
-  - This application will allow you to debug during development (ex: send the headset data to your computer).
+    - This application will allow you to debug during development (ex: send the headset data to your computer).
 6. Install VLC Media Player: https://www.videolan.org/vlc/download-windows.html.
-  - This application will be used for mirroring the headset view to your computer.
+    - This application will be used for mirroring the headset view to your computer.
 
 # Oculus Setup 
 ## Enable Device for Development and Testing
@@ -70,7 +70,7 @@ The following instructions for setting up Unity Game Engine are adapted from htt
 ## Build An Application
 1. Open Unity Hub as seen in Fig.10.
 2. Create a new 3D unity project (Fig. 11)
-  - The drop down arrow to the right of “New” allows you to choose which version of Unity to use. This is important as some applications may not be compatible with other versions of Unity. This tutorial uses version 2019.4.15f1.
+    - The drop down arrow to the right of “New” allows you to choose which version of Unity to use. This is important as some applications may not be compatible with other versions of Unity. This tutorial uses version 2019.4.15f1.
 3. See here for additional documentation on development of an application: https://developer.oculus.com/downloads/package/oculus-adb-drivers/. 
 
 # Importing a Model
@@ -118,7 +118,7 @@ Having objects appear and disappear also uses C# files (attached in the Appendic
 # Lighting 
 1. The default light often casts weird shadows. To remove these, delete the light and then add that same type of light back into the project.
 2. Four lights will be used for realistic lighting. 
-  - Two of the four lights are directional (sun like) and the other two are point lights. The direction of the lights can be changed to ensure the whole space is realistically illuminated.
+    - Two of the four lights are directional (sun like) and the other two are point lights. The direction of the lights can be changed to ensure the whole space is realistically illuminated.
 3. A light.cs script (included in Appendices) can be used to turn on and off the lights. Ensure that the light object has the light.cs script added as a component. 
 
 # Build Application
@@ -130,9 +130,9 @@ Having objects appear and disappear also uses C# files (attached in the Appendic
 
 # Debugging with ADB
 1. Open a command prompt and use the following command to see log messages from your application: adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG
-  - If you get an error saying that adb is not recognized, check your environment variables to ensure that the path to your sdk\platform-tools for Android is correct (as mentioned in the section Set Up Development Environment).
+    - If you get an error saying that adb is not recognized, check your environment variables to ensure that the path to your sdk\platform-tools for Android is correct (as mentioned in the section Set Up Development Environment).
 2. To mirror the view of the headset onto your VLC media player window, use the following command in your command prompt: adb exec-out "while true; do screenrecord --bit-rate=2m --output-format=h264 --time-limit 180 -; done" | "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe" --demux h264 --h264-fps=60 --clock-jitter=0 -
-  - Make sure you have already installed VLC Media Player as mentioned in Set Up Development Environment.
+    - Make sure you have already installed VLC Media Player as mentioned in Set Up Development Environment.
 
 # Resulting Experiment
 ## Study Introduction
