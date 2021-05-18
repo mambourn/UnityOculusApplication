@@ -44,11 +44,14 @@ The following instructions for setting up Unity Game Engine are adapted from htt
 # Set Up Development Environment
 1. Download the Oculus app on your phone and sign in with a new or existing account
 2. Download Unity Editor at https://unity3d.com/get-unity/download. Be sure to include the Android SDK and NDK Tools and OpenJDK as these will be important for debugging your application later (Fig. 1).
-3. Ensure the Android tools correctly installed by going to Android Studio -> Configure -> SDK Manager -> SDK Platforms and SDK Tools tabs (Fig. 2)
-4. Ensure that the Android tools are added to your Environment Variables for your computer so that you can access the tools from the command line. Example: C:\Users\user\AppData\Local\Android\sdk\platform-tools.
-5. Install Android Debug Bridge (ADB): https://developer.oculus.com/downloads/package/oculus-adb-drivers/.
+
+![image](https://user-images.githubusercontent.com/35569106/118723288-d517af80-b7f2-11eb-9857-61ba919228ff.png)
+
+4. Ensure the Android tools correctly installed by going to Android Studio -> Configure -> SDK Manager -> SDK Platforms and SDK Tools tabs (Fig. 2)
+5. Ensure that the Android tools are added to your Environment Variables for your computer so that you can access the tools from the command line. Example: C:\Users\user\AppData\Local\Android\sdk\platform-tools.
+6. Install Android Debug Bridge (ADB): https://developer.oculus.com/downloads/package/oculus-adb-drivers/.
     - This application will allow you to debug during development (ex: send the headset data to your computer).
-6. Install VLC Media Player: https://www.videolan.org/vlc/download-windows.html.
+7. Install VLC Media Player: https://www.videolan.org/vlc/download-windows.html.
     - This application will be used for mirroring the headset view to your computer.
 
 # Oculus Setup 
