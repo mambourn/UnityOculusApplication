@@ -169,14 +169,6 @@ Having objects appear and disappear also uses C# files (attached in the Appendic
 2. Renner, R. S., Velichkovsky, B. M., Helmert, J. R. (2013). The Perception of Egocentric Distances in Virtual Environments - A Review. ACM Computing Surveys
 3. Mohler, B. J., Creem-Regehr, S. H., Thompson, W. B., Bülthoff, H. H. (2010). The Effect of Viewing a Self-Avatar on Distance Judgments in an HMD-Based Virtual Environment. Presence: Teleoperators and Virtual Environments
 
-# Appendices
-## C# Scripts 
-### spawner.cs - Creates Objects 
-### spawner_randomized.cs - Randomized Location of Created Object
-### updateSpawner.cs - Update Spawner Location
-### destroyer.cs - Have an Object Disappear
-### light.cs - Turns On and Off Lights
-
 
 
 
