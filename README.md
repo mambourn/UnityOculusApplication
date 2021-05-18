@@ -43,37 +43,59 @@ The following instructions for setting up Unity Game Engine are adapted from htt
 
 # Set Up Development Environment
 1. Download the Oculus app on your phone and sign in with a new or existing account
-2. Download Unity Editor at https://unity3d.com/get-unity/download. Be sure to include the Android SDK and NDK Tools and OpenJDK as these will be important for debugging your application later (Fig. 1).
+2. Download Unity Editor at https://unity3d.com/get-unity/download. Be sure to include the Android SDK and NDK Tools and OpenJDK as these will be important for debugging your application later.
 
 ![image](https://user-images.githubusercontent.com/35569106/118723288-d517af80-b7f2-11eb-9857-61ba919228ff.png)
 
-4. Ensure the Android tools correctly installed by going to Android Studio -> Configure -> SDK Manager -> SDK Platforms and SDK Tools tabs (Fig. 2)
-5. Ensure that the Android tools are added to your Environment Variables for your computer so that you can access the tools from the command line. Example: C:\Users\user\AppData\Local\Android\sdk\platform-tools.
-6. Install Android Debug Bridge (ADB): https://developer.oculus.com/downloads/package/oculus-adb-drivers/.
+3. Ensure the Android tools correctly installed by going to Android Studio -> Configure -> SDK Manager -> SDK Platforms and SDK Tools tabs
+
+![image](https://user-images.githubusercontent.com/35569106/118723545-2cb61b00-b7f3-11eb-8738-2d268e62a4d7.png)
+![image](https://user-images.githubusercontent.com/35569106/118723568-350e5600-b7f3-11eb-8968-798e603ff774.png)
+
+4. Ensure that the Android tools are added to your Environment Variables for your computer so that you can access the tools from the command line. Example: C:\Users\user\AppData\Local\Android\sdk\platform-tools.
+7. Install Android Debug Bridge (ADB): https://developer.oculus.com/downloads/package/oculus-adb-drivers/.
     - This application will allow you to debug during development (ex: send the headset data to your computer).
-7. Install VLC Media Player: https://www.videolan.org/vlc/download-windows.html.
+8. Install VLC Media Player: https://www.videolan.org/vlc/download-windows.html.
     - This application will be used for mirroring the headset view to your computer.
 
 # Oculus Setup 
 ## Enable Device for Development and Testing
 1. Turn on the headset (Oculus Quest or Quest 2). Connect it via usb to your computer. 
-2. Open the Oculus App on your phone. Go to Settings and pair a new headset. Once paired, the application will show when your headset is connected (Fig. 4). 
+2. Open the Oculus App on your phone. Go to Settings and pair a new headset. Once paired, the application will show when your headset is connected.
+
+![image](https://user-images.githubusercontent.com/35569106/118723647-49525300-b7f3-11eb-9687-535a3c0f10f1.png)
+
 3. Select your device and turn on Developer Mode. 
-4. Within the headset, accept to allow USB debugging (Fig. 5). To confirm the connection, you can run adb devices on the command line or go to File -> Build Settings in your application (Fig. 6), although we won’t be creating the application until later in this tutorial. 
+4. Within the headset, accept to allow USB debugging. To confirm the connection, you can run adb devices on the command line or go to File -> Build Settings in your application, although we won’t be creating the application until later in this tutorial. 
+
+![image](https://user-images.githubusercontent.com/35569106/118723695-57a06f00-b7f3-11eb-9189-9bee23db90a9.png)
+![image](https://user-images.githubusercontent.com/35569106/118723761-671fb800-b7f3-11eb-9bba-9e141846307a.png)
 
 # Import Oculus Integration Package
-1. This step will occur in any new or existing unity project. Go to Window-> Asset Store and search for Oculus Integration (Fig. 7).When prompted, update the OVRPlugin and Spatializer. Allow it to restart the application. 
+1. This step will occur in any new or existing unity project. Go to Window-> Asset Store and search for Oculus Integration.When prompted, update the OVRPlugin and Spatializer. Allow it to restart the application. 
+![image](https://user-images.githubusercontent.com/35569106/118723817-7a328800-b7f3-11eb-8117-aace473f742e.png)
+
 2. Import to the project: Window -> Package Manager -> Packages: My Assets.
 # Configure Settings
 1. In a Unity project, go to File-> Build Settings
-2. Under Platform, select your target platform. WIndows is the default, but Mac and Linux are also supported (Fig. 8).
-3. Go to Android under Platform to ensure that Android is being used (Fig. 9).
-2. Go to Edit -> Project Settings and remove Vulcan. Add Oculus as Virtual Reality SDK. Make sure the minimum API level is at least 19. 
+2. Under Platform, select your target platform. WIndows is the default, but Mac and Linux are also supported.
+
+![image](https://user-images.githubusercontent.com/35569106/118723916-97ffed00-b7f3-11eb-88c7-755260f2f5dd.png)
+
+3. Go to Android under Platform to ensure that Android is being used.
+
+![image](https://user-images.githubusercontent.com/35569106/118723948-a1895500-b7f3-11eb-860c-591bc6e6663c.png)
+
+4. Go to Edit -> Project Settings and remove Vulcan. Add Oculus as Virtual Reality SDK. Make sure the minimum API level is at least 19. 
 # Application Development
 ## Build An Application
-1. Open Unity Hub as seen in Fig.10.
-2. Create a new 3D unity project (Fig. 11)
+1. Open Unity Hub as seen in the figure below.
+![image](https://user-images.githubusercontent.com/35569106/118724039-bebe2380-b7f3-11eb-880e-6ffb9a69eb42.png)
+
+2. Create a new 3D unity project
     - The drop down arrow to the right of “New” allows you to choose which version of Unity to use. This is important as some applications may not be compatible with other versions of Unity. This tutorial uses version 2019.4.15f1.
+![image](https://user-images.githubusercontent.com/35569106/118724057-c67dc800-b7f3-11eb-9a49-c9f564ef5216.png)
+
 3. See here for additional documentation on development of an application: https://developer.oculus.com/downloads/package/oculus-adb-drivers/. 
 
 # Importing a Model
@@ -82,7 +104,10 @@ The following instructions for setting up Unity Game Engine are adapted from htt
 2. In Blender, the dae file gets exported as an fbx file.
 3. Import the fbx file to Unity by Assets -> Import New Asset.
 4. The model can then be accessed from the Project Window. Drag the model onto the scene and position it at coordinate (0,0,0).
-5. Add Box Collider as a component of the classroom so that items will not fall through the floor (Fig. 12).
+5. Add Box Collider as a component of the classroom so that items will not fall through the floor.
+
+![image](https://user-images.githubusercontent.com/35569106/118724132-da292e80-b7f3-11eb-91a7-a0c3d72202c0.png)
+
 6. Remove the camera from the model (as this will be replaced later by a character controller so that the user has the same view as the avatar).
 ## Create Accurate Scale
 1. Unity allows the scale of any object or model to be changed through the Inspector window. 
@@ -148,6 +173,9 @@ Having objects appear and disappear also uses C# files (attached in the Appendic
 - Created virtual environment in Unity Game Engine to model a real classroom
 - Red square presented at 1-5 meters (repeated 3 times each)
 - Participants made verbal and blind walking distance judgments
+
+![image](https://user-images.githubusercontent.com/35569106/118724261-00e76500-b7f4-11eb-861c-b75b0fec4110.png)
+
 # Results
 - Judgments in the real classroom were more accurate than those in the Quest and Quest 2
   - Verbal: p < 0.001, d =0.8155
@@ -155,6 +183,9 @@ Having objects appear and disappear also uses C# files (attached in the Appendic
 - Judgments in the Quest and Quest 2 did not differ from one another
   - Verbal: p = 0.182, d = 0.33999
   - Blind walking: p = 0.864, d = 0.0429
+![image](https://user-images.githubusercontent.com/35569106/118724300-0d6bbd80-b7f4-11eb-9e14-ef123edf04d3.png)
+![image](https://user-images.githubusercontent.com/35569106/118724316-1492cb80-b7f4-11eb-9020-00d04afa482e.png)
+
 
 # Conclusions
 - Our results support the hypothesis that distance is more accurately perceived in real environments than virtual environments
